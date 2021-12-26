@@ -1,5 +1,4 @@
 {% load static %}
-
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -36,7 +35,6 @@
     </div>
 </nav>
 
-
 <div class="container">
     <div class="row">
         <div class="col-md-12">
@@ -45,10 +43,51 @@
                 <h2>
                     Curso de Python com Luciano Ramalho
                 </h2>
-                <p>
-                    Confira em breve mais informações sobre o curso que será ministrado pelo auto do livro
-                    <a href="http://shop.oreilly.com/product/0636920032519.do" target="_blank">Python Fluente</a>
-                </p>
+
+                <h4 class="mt-4">Matrículas abertas! Custo R$ 1000,00</h4>
+                <!-- INICIO FORMULARIO BOTAO PAGSEGURO -->
+                <form action="https://pagseguro.uol.com.br/checkout/v2/payment.html" method="post"
+                      onsubmit="PagSeguroLightbox(this); return false;">
+                    <!-- NÃO EDITE OS COMANDOS DAS LINHAS ABAIXO -->
+                    <input type="hidden" name="code" value="7A04378D0101CC1224B6DF84017C792B"/>
+                    <input type="hidden" name="iot" value="button"/>
+                    <input type="image"
+                           src="https://stc.pagseguro.uol.com.br/public/img/botoes/pagamentos/120x53-comprar.gif"
+                           name="submit" alt="Pague com PagSeguro - é rápido, grátis e seguro!"/>
+                </form>
+                <script type="text/javascript"
+                        src="https://stc.pagseguro.uol.com.br/pagseguro/api/v2/checkout/pagseguro.lightbox.js"></script>
+
+                <!--                -->
+                <!--                <h4 class="mt-4">Lista de espera</h4>-->
+
+
+                <!--                <form action="https://gmail.us20.list-manage.com/subscribe/post?u=3579cf003d9125d207f60fd5e&amp;id=a44aa56bd4"-->
+                <!--                      method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form"-->
+                <!--                      class="form-row align-items-center"-->
+                <!--                      target="_blank" novalidate>-->
+                <!--                    <div class="form-row align-items-center">-->
+                <!--                        <div class="col-auto">-->
+                <!--                            <label class="sr-only" for="mce-EMAIL">Email</label>-->
+                <!--                            <input type="email" value="" name="EMAIL" class="form-control required" id="mce-EMAIL"-->
+                <!--                                   placeholder="exemplo@email.com">-->
+                <!--                        </div>-->
+                <!--                        <div class="col-auto">-->
+                <!--                            <label class="sr-only" for="mce-FNAME">Nome</label>-->
+                <!--                            <input type="text" value="" name="FNAME" class="form-control required" id="mce-FNAME" placeholder="Nome">-->
+                <!--                        </div>-->
+                <!--                        <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text"-->
+                <!--                                                                                                  name="b_3579cf003d9125d207f60fd5e_a44aa56bd4"-->
+                <!--                                                                                                  tabindex="-1"-->
+                <!--                                                                                                  value="">-->
+                <!--                        </div>-->
+                <!--                        <div class="col-auto">-->
+                <!--                            <input type="submit" value="Salvar" name="subscribe" id="mc-embedded-subscribe"-->
+                <!--                                   class="btn btn-primary">-->
+                <!--                        </div>-->
+                <!--                    </div>-->
+                <!--                </form>-->
+
             </div>
             <div class="row">
                 <div class="col-md-12">
@@ -59,8 +98,10 @@
                         <div class="card-body">
                             <p class="card-text">
                                 <img src="{% static 'img/luciano-ramalho.png' %}" alt="Foto de Luciano Ramalho"
-                                     class="img.thumbnail float-left mr-3">
-                                Ramalho é sócio e professor na Python Pro e autor do Livro Python Fluente. Foi diretor
+                                     class="img-thumbnail float-left mr-3">
+                                Ramalho é sócio e professor na Python Pro e autor do Livro <a
+                                    href="http://shop.oreilly.com/product/0636920032519.do" target="_blank">Python
+                                Fluente</a>. Foi diretor
                                 técnico do Brasil Online, primeiro portal da Abril S/A na Web. Liderou times para os
                                 portais IDG Now, BOL, UOL, AOL Brasil e outros, usando Python desde 1998. Como
                                 instrutor, atendeu clientes como Citibank, CPqD, Serpro, Presidência da República,
@@ -77,7 +118,7 @@
     </div>
 </div>
 
-<footer class="main-footer mt-5 pt-4 pb-2 text-light">
+<footer class="main-footer mt-5 pt-4 text-light">
 
     <div class="container">
 
@@ -87,21 +128,21 @@
                 <address>
                     +55 (11) 91234-5678
                     <br/>
-                    <a href="mailto:ramalho@pythonpro.br" class="text-light">ramalho@pythonpro.br</a>
+                    <a href="mailto:ramalho@python.pro.br" class="text-light">ramalho@python.pro.br</a>
                 </address>
             </div>
         </div>
     </div>
-<div class="rights pb-4">
-    <div class="container">
+    <div class="rights pb-4">
+        <div class="container">
 
-        <div class="row">
-            <div class="col">
+            <div class="row">
+                <div class="col">
 
-                {% now 'Y'  %} Python Pro. Todos direitos reservados.
+                    {% now 'Y' %} Python Pro. Todos direitos reservados.
+                </div>
             </div>
         </div>
-    </div>
     </div>
 </footer>
 
