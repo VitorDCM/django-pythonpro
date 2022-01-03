@@ -1,0 +1,21 @@
+{% extends 'base/base.html' %}
+
+{% load static %}
+
+{% block title %} {{aula.titulo}} {% endblock title %}
+
+{% block description%}Página com a aula {{aula.titulo}} {% endblock description%}
+
+{% block body %}
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+
+            <h1 class="mt-4 mb-3">{{aula.titulo}}</h1>
+            <iframe src="https://player.vimeo.com/video/{{aula.vimeo_id}}" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+
+
+        </div>
+    </div>
+</div>
+{% endblock body %}
