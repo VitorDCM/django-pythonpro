@@ -1,5 +1,7 @@
 from typing import List
 
+from django.db.models import Prefetch
+
 from pypro.modulos.models import Modulo, Aula
 
 

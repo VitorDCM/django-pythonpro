@@ -1,0 +1,22 @@
+version: "3.9"
+   
+services:
+  db:
+    container_name: cursodjango_database
+    image: postgres:11.5
+    volumes:
+      - ./data/db:/var/lib/postgresql/data
+  web:
+    build: .
+    command: python manage.py runserver 0.0.0.0:5432
+    volumes:
+      - .:/code
+    ports:
+      - "5433:5432"
+    environment:
+      - POSTGRES_NAME=pythonpro
+      - POSTGRES_USER=pythonpro
+      - POSTGRES_PASSWORD=pythonpro
+    depends_on:
+      - db
+

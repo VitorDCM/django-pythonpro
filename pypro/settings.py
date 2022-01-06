@@ -33,6 +33,9 @@ ALLOWED_HOSTS = config('ALLOWED_HOSTS', cast=Csv())
 
 AUTH_USER_MODEL = 'base.User'
 
+LOGIN_URL = '/contas/login'
+LOGIN_REDIRECT_URL = '/modulos/'
+LOGOUT_REDIRECT_URL = '/'
 # Application definition
 
 COLLECTFAST_STRATEGY = "collectfast.strategies.boto3.Boto3Strategy"
@@ -49,6 +52,7 @@ INSTALLED_APPS = [
     'pypro.aperitivos',
     'pypro.modulos',
     'ordered_model',
+    'pypro.turmas',
 ]
 
 MIDDLEWARE = [
@@ -82,6 +86,14 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'pypro.wsgi.application'
 
+# Configuração de envio de Email
+
+EMAIL_BACKEND = config('EMAIL_BACKEND')
+EMAIL_HOST = config('EMAIL_HOST')
+EMAIL_PORT = config('EMAIL_PORT')
+EMAIL_HOST_USER = config('EMAIL_HOST_USER')
+EMAIL_HOST_PASSWORD = config('EMAIL_HOST_PASSWORD')
+EMAIL_USE_TLS = config('EMAIL_USE_TLS')
 
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
